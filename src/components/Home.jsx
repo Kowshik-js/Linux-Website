@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import About from "./About";
+import Contact from "./Contact"; // ✅ Import Contact
 import linuxBg from "../assets/linux-bg.jpg";
 
-// Home.jsx
 export default function Home() {
   return (
     <div>
@@ -31,6 +31,9 @@ export default function Home() {
 
       {/* About Section */}
       <About />
+
+      {/* Contact Section ✅ added */}
+      <Contact />
     </div>
   );
 }

@@ -8,5 +8,5 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  // base: '/Linux-Website/' // <-- replace with your repo name exactly
+  base: '/Linux-Website/' // <-- replace with your repo name exactly
 })

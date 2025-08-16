@@ -11,6 +11,14 @@ export default function Nav() {
     { label: "Contact", id: "contact" },
   ];
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <nav className="bg-gradient-to-r from-black via-emerald-900 to-emerald-700 text-emerald-300 fixed w-full z-50 shadow-lg border-b border-emerald-500">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
@@ -29,16 +37,16 @@ export default function Nav() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-12 text-lg absolute left-1/2 transform -translate-x-1/2">
           {menuItems.map(({ label, id }) => (
-            <a
+            <button
               key={id}
-              href={`#${id}`}
+              onClick={() => handleScroll(id)}
               className="relative group scroll-smooth"
             >
               <span className="transition-colors duration-300 group-hover:text-yellow-300">
                 {label}
               </span>
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </button>
           ))}
         </div>
 
@@ -53,20 +61,17 @@ export default function Nav() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gradient-to-b from-purple-700 to-pink-700 px-6 py-4 space-y-4 animate-slideDown">
+        <div className="md:hidden bg-gradient-to-b from-emerald-900 to-emerald-700 px-6 py-4 space-y-4 animate-slideDown">
           {menuItems.map(({ label, id }) => (
-            <a
+            <button
               key={id}
-              href={`#${id}`}
-              onClick={() => setIsOpen(false)}
-              className="block text-lg hover:text-yellow-300 transition-colors scroll-smooth"
+              onClick={() => handleScroll(id)}
+              className="block text-lg hover:text-yellow-300 transition-colors scroll-smooth w-full text-left"
             >
               {label}
-            </a>
+            </button>
           ))}
         </div>
-
-        
       )}
     </nav>
   );

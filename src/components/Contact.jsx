@@ -30,7 +30,7 @@ export default function Contact() {
             <span className="font-semibold">Phone:</span> +91 91410 47589
           </p>
           <p>
-            <span className="font-semibold">Address:</span> SDM Institute of Technology, Ujire
+            <span className="font-semibold">Address:</span> Bengaluru, Karnataka
           </p>
         </div>
 

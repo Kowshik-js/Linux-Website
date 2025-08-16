@@ -152,17 +152,17 @@ function Hero() {
 
       {/* Download Cheat Sheet */}
       <div className="mt-10 text-center">
-        <p className="text-blue-200 text-lg mb-3">
-          Want all these commands in one place? Download the complete Linux Cheat Sheet.
-        </p>
-        <a
-          // href={CheatSheetPDF}
-          // download="Linux_Cheat_Sheet.pdf"
-          className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition-all duration-200"
-        >
-          📥 Download Cheat Sheet
-        </a>
-      </div>
+  <p className="text-blue-200 text-lg mb-3">
+    Want all these commands in one place? Download the complete Linux Cheat Sheet.
+  </p>
+  <button
+    onClick={() => alert("🚀 Coming Soon...")}
+    className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition-all duration-200"
+  >
+    📥 Download Cheat Sheet
+  </button>
+</div>
+
     </div>
   );
 }
