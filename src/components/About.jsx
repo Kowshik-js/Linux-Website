@@ -49,15 +49,17 @@ export default function About() {
 
         {/* Intro Text */}
         <motion.p
-          className="max-w-3xl mx-auto text-lg mb-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+        className="max-w-3xl mx-auto text-lg mb-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Hi, I'm <span className="font-semibold">Kowshik J S</span>, a Computer Science
-          Engineering graduate from SDM Institute of Technology, Ujire. I am passionate
-          about technology, open-source systems, and sharing knowledge with others.
+        Hi, I'm <span className="font-semibold">Kowshik J S</span>, a Computer Science
+        Engineering graduate from SDM Institute of Technology, Ujire. I am passionate
+        about technology, open-source systems, and love sharing the small things I
+        learn along my journey.
         </motion.p>
+
 
         <motion.p
           className="max-w-3xl mx-auto mb-12 text-gray-200"

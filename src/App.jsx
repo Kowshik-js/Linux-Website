@@ -5,10 +5,11 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Content from "./components/Content";
 
+
 export default function App() {
   const location = useLocation();
 
-  // Show navbar only on home
+  
   const showNavPages = ["/"];
 
   return (
@@ -17,10 +18,8 @@ export default function App() {
 
       <main className="flex-grow">
         <Routes>
-          {/* Home includes Hero, About, Contact */}
           <Route path="/" element={<Home />} />
 
-          {/* Other routes */}
           <Route path="/hero" element={<Hero />} />
           <Route path="/content/:topic" element={<Content />} />
         </Routes>
