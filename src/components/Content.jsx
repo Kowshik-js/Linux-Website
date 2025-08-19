@@ -131,7 +131,182 @@ function Content() {
         </div>
       </div>
     ),
-  };
+    "Linux Installation":(
+      <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">Linux Installation</h1>
+
+      {/* Pre-requisites */}
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">1. Pre-requisites</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Ensure system meets hardware requirements (RAM, CPU, disk space).</li>
+          <li>Backup important data before installation.</li>
+          <li>Download the Linux distribution ISO (Ubuntu, Fedora, Debian, etc.).</li>
+          <li>Create a bootable USB/DVD using <b>Rufus</b>, <b>Etcher</b>, or the <code>dd</code> command.</li>
+        </ul>
+      </section>
+
+      {/* Boot Process */}
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">2. Boot Process</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Insert the bootable media and restart the computer.</li>
+          <li>Enter <b>BIOS/UEFI</b> (press <code>F2</code>, <code>F10</code>, or <code>Del</code>).</li>
+          <li>Change boot order to prioritize USB/DVD.</li>
+          <li>Save and reboot → system loads the Linux installer.</li>
+        </ul>
+      </section>
+
+      {/* Installation Steps */}
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">3. Installation Steps</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Choose <b>language</b> and <b>keyboard layout</b>.</li>
+          <li>Select <b>Try Linux</b> (live mode) or <b>Install Linux</b>.</li>
+          <li>Decide <b>Installation type</b>:
+            <ul className="list-disc list-inside ml-6">
+              <li>Dual-boot with another OS</li>
+              <li>Erase disk and install Linux</li>
+              <li>Manual partitioning (custom setup)</li>
+            </ul>
+          </li>
+          <li>Create partitions:
+            <ul className="list-disc list-inside ml-6">
+              <li><code>/</code> (root) → main system</li>
+              <li><code>/home</code> → personal files</li>
+              <li><code>swap</code> → virtual memory</li>
+              <li><code>/boot</code> (optional)</li>
+            </ul>
+          </li>
+          <li>Provide <b>username, password, hostname</b>.</li>
+          <li>Begin installation → system copies files and installs <b>GRUB bootloader</b>.</li>
+        </ul>
+      </section>
+
+      {/* Post Installation */}
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">4. Post Installation</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Remove USB/DVD and reboot.</li>
+          <li>Login with created credentials.</li>
+          <li>Run updates:
+            <pre className="bg-gray-900 text-green-400 p-2 rounded mt-2">
+{`sudo apt update && sudo apt upgrade   # Debian/Ubuntu
+sudo dnf update                       # Fedora
+sudo pacman -Syu                      # Arch`}
+            </pre>
+          </li>
+          <li>Install essential software (browser, text editor, compilers).</li>
+          <li>Set up drivers (Wi-Fi, graphics).</li>
+        </ul>
+      </section>
+
+      <p className="mt-4 text-gray-700">
+        ⚡ <b>Final Note:</b> Beginners can use the <b>guided installation</b>, while advanced
+        users may configure <b>custom partitions</b> for better system management.
+      </p>
+    </div>
+  ),
+  "Important Things to Remember in Linux":(
+      <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">📌 Important Things to Remember in Linux</h1>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold">1. Superuser (Root Account)</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>Linux has a superuser/root account with full administrative privileges.</li>
+          <li>Root can create, modify, and delete files system-wide.</li>
+          <li>Be careful while using root as mistakes can damage the system.</li>
+        </ul>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold">2. File & Directory System</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>Linux follows a hierarchical directory structure.</li>
+          <li>Case-sensitive → <code>ABC.txt</code> and <code>abc.txt</code> are different.</li>
+          <li>Avoid spaces in filenames. Use <code>-</code> or <code>_</code> instead.</li>
+          <li>
+            Important directories:
+            <ul className="list-disc list-inside ml-6">
+              <li><code>/home</code> → User files</li>
+              <li><code>/etc</code> → Configuration files</li>
+              <li><code>/var</code> → Logs & variable data</li>
+              <li><code>/bin</code>, <code>/sbin</code>, <code>/usr/bin</code> → Executables</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold">3. Commands</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>Linux commands are case-sensitive.</li>
+          <li>Commands may require options/arguments. Example:</li>
+        </ul>
+        <pre className="bg-gray-800 text-white p-3 rounded-md mt-2">
+          <code>ls -l /home</code>
+        </pre>
+        <p className="mt-2">Basic commands: <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>cat</code>, <code>chmod</code>, <code>chown</code></p>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold">4. Access Types</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>Console Access → Local terminal on the machine.</li>
+          <li>Remote Access → Connect via SSH or PuTTY.</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2 className="text-xl font-semibold">6. Flexibility</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>Linux is open source, flexible, and secure.</li>
+          <li>Supports multiple hardware platforms.</li>
+          <li>Highly customizable (kernel, shell, packages, services).</li>
+        </ul>
+      </section>
+    </div>
+  ),
+  "Putty":(
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">📌 Using PuTTY & SSH in Linux</h1>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold">1. Using PuTTY (Windows → Linux)</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>Open PuTTY on Windows.</li>
+          <li>Enter the <strong>IP address</strong> of the Linux server.</li>
+          <li>Select connection type: <code>SSH</code> (default port: <code>22</code>).</li>
+          <li>Click <strong>Open</strong> to start the session.</li>
+          <li>When prompted:
+            <ul className="list-disc list-inside ml-6">
+              <li>Enter <strong>username</strong></li>
+              <li>Enter <strong>password</strong></li>
+            </ul>
+          </li>
+          <li>Once logged in → you can run Linux commands remotely.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold">2. Using SSH (Command Line)</h2>
+        <ul className="list-disc list-inside ml-4">
+          <li>From a Linux terminal or Windows PowerShell, run:</li>
+        </ul>
+        <pre className="bg-gray-800 text-white p-3 rounded-md mt-2">
+          <code>ssh username@IP_Address</code>
+        </pre>
+        <p className="mt-2">Example:</p>
+        <pre className="bg-gray-800 text-white p-3 rounded-md mt-2">
+          <code>ssh -l user 192.168.1.10</code>
+        </pre>
+        <p className="mt-2">After entering password → you will be logged into the remote server.</p>
+      </section>
+    </div>
+  )
+};
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-6">

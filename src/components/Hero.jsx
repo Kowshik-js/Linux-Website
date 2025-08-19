@@ -11,7 +11,7 @@ function Hero() {
     "Linux vs Windows",
     "Linux Installation",
     "Important Things to Remember in Linux",
-    "Package Management",
+    // "Package Management",
     "Putty",
     "What is root",
     "Introduction to File System",
