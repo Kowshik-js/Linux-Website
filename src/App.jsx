@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Content from "./components/Content";
+import Chatbot from "./components/Chatbot";
 
 
 export default function App() {
@@ -24,7 +25,7 @@ export default function App() {
           <Route path="/content/:topic" element={<Content />} />
         </Routes>
       </main>
-
+      <Chatbot />
       <Footer />
     </div>
   );
