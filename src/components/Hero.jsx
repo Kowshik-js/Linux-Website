@@ -155,12 +155,15 @@ function Hero() {
   <p className="text-blue-200 text-lg mb-3">
     Want all these commands in one place? Download the complete Linux Cheat Sheet.
   </p>
-  <button
-    onClick={() => alert("🚀 Coming Soon...")}
-    className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition-all duration-200"
-  >
-    📥 Download Cheat Sheet
-  </button>
+  <a
+  href="https://drive.google.com/uc?export=download&id=1MCtz086UO04xgTyU1JQEDo2Qq40GWROG"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition-all duration-200 inline-block text-center"
+>
+  📥 Download Cheat Sheet
+</a>
+
 </div>
 
     </div>

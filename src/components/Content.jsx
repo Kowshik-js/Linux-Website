@@ -305,8 +305,566 @@ sudo pacman -Syu                      # Arch`}
         <p className="mt-2">After entering password → you will be logged into the remote server.</p>
       </section>
     </div>
-  )
-};
+  ),
+  "What is root": (
+  <div className="text-left space-y-4">
+    <h2 className="text-2xl font-semibold text-blue-600">What is Root?</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Root Account */}
+      <div>
+        <h3 className="text-xl font-bold text-green-600">Root Account</h3>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>Superuser account in Linux</li>
+          <li>Has full administrative privileges</li>
+          <li>Can manage users, processes, and system files</li>
+        </ul>
+      </div>
+
+      {/* Root Directory */}
+      <div>
+        <h3 className="text-xl font-bold text-purple-600">Root Directory (/)</h3>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>Top-level directory in Linux filesystem hierarchy</li>
+          <li>All other files and directories branch out from here</li>
+          <li>Represented by <code>/</code></li>
+        </ul>
+      </div>
+
+      {/* Root Home Directory */}
+      <div>
+        <h3 className="text-xl font-bold text-red-600">Root Home Directory (/root)</h3>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>Personal home directory of the root user</li>
+          <li>Separate from regular user home directories (/home/username)</li>
+          <li>Used for root-specific files and configurations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+),
+"Introduction to File System": (
+  <div className="text-left space-y-4">
+    <h2 className="text-2xl font-semibold text-blue-600">Introduction to File System</h2>
+    <p className="text-gray-700">
+      A file system is a system used by an operating system to manage files. 
+      It controls how data is stored and retrieved.
+    </p>
+
+    {/* Example */}
+    <div>
+      <h3 className="text-xl font-bold text-green-600">Examples</h3>
+      <ul className="list-disc list-inside text-gray-700">
+        <li>System config → folder A</li>
+        <li>User files → folder B</li>
+        <li>Log files → folder C</li>
+        <li>Commands/Scripts → folder D</li>
+      </ul>
+    </div>
+
+    {/* Types */}
+    <div>
+      <h3 className="text-xl font-bold text-purple-600">Types of File Systems</h3>
+      <ul className="list-disc list-inside text-gray-700">
+        <li>ext3, ext4 → Linux</li>
+        <li>NTFS, FAT → Windows</li>
+      </ul>
+    </div>
+
+    {/* Commands */}
+    <div>
+      <h3 className="text-xl font-bold text-red-600">Basic Commands</h3>
+      <ul className="list-disc list-inside text-gray-700">
+        <li><code>cd</code> → Root directory</li>
+        <li><code>ls -l</code> → List directories in root</li>
+      </ul>
+    </div>
+
+    {/* File System Structure */}
+    <div>
+      <h3 className="text-xl font-bold text-indigo-600">File System Structure</h3>
+      <ul className="list-disc list-inside text-gray-700 space-y-1">
+        <li><code>/boot</code> → Boot files</li>
+        <li><code>/root</code> → Root home directory</li>
+        <li><code>/dev</code> → System devices</li>
+        <li><code>/etc</code> → Configuration files</li>
+        <li><code>/bin</code> → Commands (ls, pwd)</li>
+        <li><code>/sbin</code> → System commands</li>
+        <li><code>/opt</code> → Optional add-ons</li>
+        <li><code>/proc</code> → Process-related files</li>
+        <li><code>/lib</code> → Library files</li>
+        <li><code>/tmp</code> → Temporary files</li>
+        <li><code>/home</code> → User directories</li>
+        <li><code>/var</code> → System logs</li>
+        <li><code>/usr</code> → User applications</li>
+        <li><code>/mnt</code> → Mount points</li>
+        <li><code>/media</code> → External media</li>
+      </ul>
+    </div>
+  </div>
+),
+"Navigation File System":(
+  <div className="text-left space-y-4">
+        <h2 className="text-2xl font-semibold text-blue-600">Navigate to File System</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Commands Section */}
+          <div>
+            <h3 className="text-xl font-bold text-green-600">Commands</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>cd (Change directory) - Navigate to a different directory</li>
+              <li>pwd (Print working directory) - Display the current directory path</li>
+              <li>ls (Listing) - List files and directories (equivalent to 'dir' on Windows)</li>
+              <li>cd .. - Move up one directory level</li>
+              <li>cd - - Return to the previous directory</li>
+              <li>cd / - Navigate to the root directory</li>
+              <li>cd ~ - Go to the home directory</li>
+            </ul>
+          </div>
+
+          {/* Properties Section */}
+          <div>
+            <h3 className="text-xl font-bold text-red-600">Directory Properties</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Type - Specifies the type of file or directory</li>
+              <li># of files owner group - Indicates the number of files and ownership group</li>
+              <li>drwxr-xr-x - File permissions (read, write, execute for owner, group, and others)</li>
+              <li>rw - Read and write permissions</li>
+              <li>-rwx - Read, write, and execute permissions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+),
+ "File System Paths":(
+      <div className="text-left space-y-4">
+        <h2 className="text-2xl font-semibold text-blue-600">File System Paths</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Absolute Paths Section */}
+          <div>
+            <h3 className="text-xl font-bold text-green-600">Absolute Paths</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>/ (Root directory)</li>
+              <li>/var/log/samba (Path to Samba log files)</li>
+            </ul>
+          </div>
+
+          {/* Relative Paths Section */}
+          <div>
+            <h3 className="text-xl font-bold text-red-600">Relative Paths</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>./ (Current directory)</li>
+              <li>../ (Parent directory)</li>
+              <li>log (Relative path to a log file)</li>
+              <li>samba (Relative path to a samba directory)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ ),
+ "Creating Files and Directories":(
+   <div className="text-left space-y-4">
+        <h2 className="text-2xl font-semibold text-blue-600">Creating Files and Directories</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Creating Files Section */}
+          <div>
+            <h3 className="text-xl font-bold text-green-600">Creating Files</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>vi - Open a file in vi editor to create or edit</li>
+              <li>touch - Create an empty file or update the timestamp of an existing file</li>
+              <li>touch children7 children7 filename - Create multiple files with specific names</li>
+            </ul>
+          </div>
+
+          {/* Creating Directories Section */}
+          <div>
+            <h3 className="text-xl font-bold text-red-600">Creating Directories</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>mkdir - Create a single directory</li>
+              <li>mkdir foldername - Create a directory with a specific name</li>
+              <li>mkdir - Create more than one folder at a time (with multiple names)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ ),
+ "Copying the Directories":(
+  <div className="text-left space-y-4">
+        <h2 className="text-2xl font-semibold text-blue-600">Copying the Directories (-R=Recursive)</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Command Usage Section */}
+          <div>
+            <h3 className="text-xl font-bold text-green-600">Command Usage</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>To copy a directory on Linux, use the <code>cp</code> command with the <code>-r</code> option for recursive copying</li>
+              <li>Recursive and specify the source and destination directories to be copied</li>
+              <li><code>cp -r source_folder destination_folder</code> - Copy a folder recursively</li>
+            </ul>
+          </div>
+
+          {/* Examples and Notes Section */}
+          <div>
+            <h3 className="text-xl font-bold text-red-600">Examples and Notes</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Create a directory with <code>mkdir config</code></li>
+              <li>Create files with <code>touch a.config b.config c.config</code></li>
+              <li><code>cp -r config /tmp/config_backup</code> - Copy config directory to /tmp/config_backup</li>
+              <li>For a specific test, we are copying directory (not file)</li>
+              <li>Under temp folder, we have created (e.g., test folder)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ ),
+ "Finding Files and Directories":(
+ <div className="text-left space-y-4">
+        <h2 className="text-2xl font-semibold text-blue-600">Finding Files and Directories</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Commands Section */}
+          <div>
+            <h3 className="text-xl font-bold text-green-600">Commands</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>locate - Search for files and directories by name</li>
+              <li>find - Search for files and directories with detailed criteria (e.g., name, type, size)</li>
+            </ul>
+          </div>
+
+          {/* Notes Section */}
+          <div>
+            <h3 className="text-xl font-bold text-red-600">Notes</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li><code>locate</code> provides the full path where the filename is located</li>
+              <li><code>find</code> allows searching with options like <code>-name</code> or <code>-type</code></li>
+              <li>Root has permission to access all files (e.g., using <code>su</code> or <code>sudo</code> with password)</li>
+              <li>Avoid using <code>su -</code> to prevent potential issues</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ ),
+ "Difference between Find and Locate":(
+  <div className="text-left space-y-4">
+        <h2 className="text-2xl font-semibold text-blue-600">Difference Between find and locate</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* find Section */}
+          <div>
+            <h3 className="text-xl font-bold text-green-600">find</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Searches the filesystem in real-time for files and directories based on specified criteria (e.g., name, size, type)</li>
+              <li>Requires root permissions for some directories but can be used with <code>sudo</code></li>
+              <li>More flexible and precise, allowing complex searches (e.g., <code>find / -name "*.txt"</code>)</li>
+              <li>Slower as it scans the entire filesystem or specified paths</li>
+            </ul>
+          </div>
+
+          {/* locate Section */}
+          <div>
+            <h3 className="text-xl font-bold text-red-600">locate</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Searches a pre-built database of filesystem contents for files and directories by name</li>
+              <li>Faster than <code>find</code> since it uses an indexed database updated periodically (e.g., via <code>updatedb</code>)</li>
+              <li>Less flexible, limited to name-based searches (e.g., <code>locate filename</code>)</li>
+              <li>May not reflect recent changes until the database is updated</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+ ),
+ 
+ "Wildcards":(
+   <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-gray-200 mx-auto max-w-4xl font-sans text-gray-800">
+      <header>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center border-b-4 border-blue-500 pb-4 mb-8">
+          Linux Wildcards
+        </h1>
+      </header>
+
+      <section className="introduction">
+        <p className="italic text-gray-600 text-center text-lg mb-8">
+          A wildcard is a character that can be used as a substitute for any character or a class of characters in a search. They are a powerful tool in Linux for managing files and directories efficiently.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-3xl font-semibold text-green-600 border-l-4 border-green-600 pl-4 mt-10 mb-6">
+          Basic Wildcards
+        </h2>
+
+        <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 mt-6">
+          <h3 className="text-red-500 font-mono text-2xl font-bold bg-red-50 px-3 py-1 rounded-md inline-block mb-2">
+            * (Asterisk)
+          </h3>
+          <p className="text-gray-700 text-lg mb-4">
+            Matches zero or more characters.
+          </p>
+          <ul className="list-none pl-0 mt-5">
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">touch abcd{'1..9'}xyz</span>: Creates 9 files, from `abcd1xyz` to `abcd9xyz`.
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">touch abcd-xyz</span>: Creates a single file named `abcd-xyz`.
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">touch abcd9-xyz</span>: Creates a single file named `abcd9-xyz`.
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">ls abcd*</span>: Lists all files that start with "abcd".
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">rm abcd*</span>: Removes all files that start with "abcd".
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">rm *xyz</span>: Removes all files that end with "xyz".
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">ls d*bcd*</span>: Lists all files that start with "d" and end with "bcd".
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">ls d*[cd]*</span>: Lists files that start with "d", contain 'c' or 'd', followed by anything.
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">rm *xy*</span>: Deletes all files that have "xy" in their name.
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 mt-6">
+          <h3 className="text-red-500 font-mono text-2xl font-bold bg-red-50 px-3 py-1 rounded-md inline-block mb-2">
+            ? (Question Mark)
+          </h3>
+          <p className="text-gray-700 text-lg mb-4">
+            Matches a single character.
+          </p>
+          <ul className="list-none pl-0 mt-5">
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">ls file?.txt</span>: Lists files like `file1.txt`, `file2.txt`, but not `file10.txt`.
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 mt-6">
+          <h3 className="text-red-500 font-mono text-2xl font-bold bg-red-50 px-3 py-1 rounded-md inline-block mb-2">
+            [] (Square Brackets)
+          </h3>
+          <p className="text-gray-700 text-lg mb-4">
+            Matches a range of characters or a set of specific characters.
+          </p>
+          <ul className="list-none pl-0 mt-5">
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">ls [a-d]*.txt</span>: Lists files starting with 'a', 'b', 'c', or 'd'.
+            </li>
+            <li className="mb-3 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-sm">
+              <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium whitespace-pre-wrap">ls [abc]*.txt</span>: Lists files starting with 'a', 'b', or 'c'.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+ ),
+ "Linux File types":(
+ <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-gray-200 mx-auto max-w-4xl font-sans text-gray-800">
+      <header>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center border-b-4 border-blue-500 pb-4 mb-8">
+          Linux File Types
+        </h1>
+      </header>
+
+      <section>
+        <p className="italic text-gray-600 text-center text-lg mb-8">
+          In Linux, everything is considered a file, and the type of file is indicated by a single character at the beginning of a long listing (`ls -l`).
+        </p>
+
+        <table className="w-full border-collapse mt-5">
+          <thead>
+            <tr className="border-b border-gray-300">
+              <th className="bg-gray-100 text-gray-900 text-left py-3 md:py-4 px-2 md:px-4 border-b-2 border-gray-300 rounded-tl-lg">Character</th>
+              <th className="bg-gray-100 text-gray-900 text-left py-3 md:py-4 px-2 md:px-4 border-b-2 border-gray-300">Type of File</th>
+              <th className="bg-gray-100 text-gray-900 text-left py-3 md:py-4 px-2 md:px-4 border-b-2 border-gray-300 rounded-tr-lg">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                -
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Regular File
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                This is an ordinary file that contains data, such as a text document, image, or executable program.
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                d
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Directory
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                A folder that holds other files and directories, organizing the file system in a hierarchical structure.
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                l
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Link
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                Also known as a "symbolic link" or "symlink," this is a pointer or shortcut to another file or directory.
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                c
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Character Special File
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                Represents a device that handles data character by character, such as a terminal, keyboard, or serial port.
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                b
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Block Special File
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                Represents a device that handles data in blocks, like a hard drive, solid-state drive (SSD), or USB drive.
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                p
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Named Pipe
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                A special file used for inter-process communication (IPC) where data is read and written in a "first-in, first-out" (FIFO) manner.
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200 hover:bg-gray-50">
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top font-mono font-bold text-lg text-center bg-blue-50 text-blue-600">
+                s
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+                Socket
+              </td>
+              <td className="py-3 md:py-4 px-2 md:px-4">
+                A special file used for inter-process communication (IPC) that allows processes to communicate over a network or within the same machine.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2 className="text-3xl font-semibold text-green-600 border-l-4 border-green-600 pl-4 mt-10 mb-4">
+          How to check a file's type
+        </h2>
+        <p className="text-gray-700 text-lg">
+          You can see the file type by using the <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded-md text-sm font-medium">ls -l</span> command in your terminal. The first character of the output for each file or directory indicates its type.
+        </p>
+        <div className="font-mono bg-gray-200 text-gray-800 px-4 py-3 rounded-lg mt-4 overflow-auto">
+          <pre>ls -l /dev/</pre>
+        </div>
+      </section>
+    </div>
+  ),
+  "Types of Links":(
+      <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-gray-200 mx-auto max-w-4xl font-sans text-gray-800">
+  <header>
+    <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center border-b-4 border-blue-500 pb-4 mb-8">
+      Linux Links: Soft Links and Hard Links
+    </h1>
+  </header>
+
+  <section>
+    <p className="italic text-gray-600 text-center text-lg mb-8">
+      In Linux, a link is a pointer to a file. There are two primary types of links, and understanding them requires first knowing about the **Inode**.
+    </p>
+    <p className="text-gray-700 text-lg mb-8">
+      An <span className="font-bold text-gray-900">Inode</span> is a data structure on the disk that stores all the information about a file, except for its name. This includes the file's content location on the disk, permissions, and owner. When you create a file, the system assigns it a unique inode number. The filename is simply a human-readable label that points to this inode.
+    </p>
+
+    <table className="w-full border-collapse mt-5">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="bg-gray-100 text-gray-900 text-left py-3 md:py-4 px-2 md:px-4 border-b-2 border-gray-300 rounded-tl-lg">Feature</th>
+          <th className="bg-gray-100 text-gray-900 text-left py-3 md:py-4 px-2 md:px-4 border-b-2 border-gray-300">Soft Link (Symbolic Link)</th>
+          <th className="bg-gray-100 text-gray-900 text-left py-3 md:py-4 px-2 md:px-4 border-b-2 border-gray-300 rounded-tr-lg">Hard Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="border-b border-gray-200 hover:bg-gray-50">
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top font-bold bg-blue-50 text-blue-600">
+            Definition
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            A pointer to the file's path name.
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            A pointer to the file's inode.
+          </td>
+        </tr>
+        <tr className="border-b border-gray-200 hover:bg-gray-50">
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top font-bold bg-blue-50 text-blue-600">
+            Inode
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            Has its own unique inode number.
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            Shares the same inode number as the original file.
+          </td>
+        </tr>
+        <tr className="border-b border-gray-200 hover:bg-gray-50">
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top font-bold bg-blue-50 text-blue-600">
+            Effect of Deleting Original File
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            The soft link will break and become a "dangling link".
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            The hard link is unaffected; the file content remains as long as at least one hard link exists.
+          </td>
+        </tr>
+        <tr className="border-b border-gray-200 hover:bg-gray-50">
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top font-bold bg-blue-50 text-blue-600">
+            Cross-Filesystem
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            Can link to files on different partitions.
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            Cannot link to files on different partitions.
+          </td>
+        </tr>
+        <tr className="border-b border-gray-200 hover:bg-gray-50">
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top font-bold bg-blue-50 text-blue-600">
+            Directory Linking
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            Can be created for directories.
+          </td>
+          <td className="py-3 md:py-4 px-2 md:px-4 align-top">
+            Cannot be created for directories.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  
+</div>
+  ),
+
+}
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-6">
